@@ -11,6 +11,14 @@ pip install transformers --upgrade
 # pip install transformers==4.42.3
 ```
 
+```
+# if encounter rust installation error
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+export PATH="$HOME/.cargo/bin:$PATH"
+source ~/.cargo/env
+```
+
+
 ### Evaluation
 You can evaluate Qwen2.5/Qwen2-Math-Instruct series model with the following command:
 ```bash
