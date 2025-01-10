@@ -2,6 +2,9 @@ set -ex
 
 PROMPT_TYPE=$1
 MODEL_NAME_OR_PATH=$2
+
+DATA_NAME=$3
+
 OUTPUT_DIR=${MODEL_NAME_OR_PATH}/math_eval
 
 SPLIT="test"
@@ -9,7 +12,7 @@ NUM_TEST_SAMPLE=-1
 
 # English open datasets
 # DATA_NAME="gsm8k,math,svamp,asdiv,mawps,carp_en,tabmwp,minerva_math,gaokao2023en,olympiadbench,college_math"
-DATA_NAME="math"
+# DATA_NAME="math"
 TOKENIZERS_PARALLELISM=false \
 python3 -u math_eval.py \
     --model_name_or_path ${MODEL_NAME_OR_PATH} \
