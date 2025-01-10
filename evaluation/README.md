@@ -24,38 +24,9 @@ You can evaluate Qwen2.5/Qwen2-Math-Instruct series model with the following com
 ```bash
 # Qwen2.5-Math-Instruct Series
 PROMPT_TYPE="qwen25-math-cot"
-# Qwen2.5-Math-1.5B-Instruct
-export CUDA_VISIBLE_DEVICES="0"
-MODEL_NAME_OR_PATH="Qwen/Qwen2.5-Math-1.5B-Instruct"
-bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH
 
-# Qwen2.5-Math-7B-Instruct
-export CUDA_VISIBLE_DEVICES="0"
-MODEL_NAME_OR_PATH="Qwen/Qwen2.5-Math-7B-Instruct"
-bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH
+CUDA_VISIBLE_DEVICES=0 bash sh/eval.sh "qwen25-math-cot" /workspace/wxd/Llama-3.2-1B-Instruct
 
-# Qwen2.5-Math-72B-Instruct
-export CUDA_VISIBLE_DEVICES="0,1,2,3"
-MODEL_NAME_OR_PATH="Qwen/Qwen2.5-Math-72B-Instruct"
-bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH
-
-
-# Qwen2-Math-Instruct Series
-PROMPT_TYPE="qwen-boxed"
-# Qwen2-Math-1.5B-Instruct
-export CUDA_VISIBLE_DEVICES="0"
-MODEL_NAME_OR_PATH="Qwen/Qwen2-Math-1.5B-Instruct"
-bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH
-
-# Qwen2-Math-7B-Instruct
-export CUDA_VISIBLE_DEVICES="0"
-MODEL_NAME_OR_PATH="Qwen/Qwen2-Math-7B-Instruct"
-bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH
-
-# Qwen2-Math-72B-Instruct
-export CUDA_VISIBLE_DEVICES="0,1,2,3"
-MODEL_NAME_OR_PATH="Qwen/Qwen2-Math-72B-Instruct"
-bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH
 ```
 
 ## Acknowledgement
